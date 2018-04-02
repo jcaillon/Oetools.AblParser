@@ -2,6 +2,8 @@ version: '{branch}.{build}'
 image: Visual Studio 2017
 configuration: Release
 platform: Any CPU
+before_build:
+- cmd: nuget restore -recursive
 build:
   verbosity: normal
 notifications:
